@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Task</ion-title>
+    <ion-icon name="close" slot="end" size="medium" (click)="dismis()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-textarea [(ngModel)]="itemTitle" placeholder="type your task Title here"></ion-textarea>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-textarea [(ngModel)]="itemContent" placeholder="type your task content here"></ion-textarea>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="itemCategory">
+        <ion-select-option value="frontEnd">frontEnd</ion-select-option>
+        <ion-select-option value="backEnd">backEnd</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+    <div style="display: flex; justify-content: center; text-align: center; margin-top: 10px;">
+    <ion-button style="width: 80%;" (click)="addTask()">
+      <ion-icon name="add-outline" style="padding: 10px;"></ion-icon>
+      <p>Add New Task</p>
+    </ion-button>
+  </div>
+</ion-content>
